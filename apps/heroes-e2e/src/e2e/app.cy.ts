@@ -47,9 +47,7 @@ describe('heroes', () => {
     beforeEach(() => cy.visit('heroes/2'));
 
     it('should display title', () => {
-      cy.fixture('heroes').then((heroes: Hero[]) => {
-        getTitle().contains('heroes-detail');
-      });
+      getTitle().contains('heroes-detail');
     });
 
     it('should display hero data', () => {
