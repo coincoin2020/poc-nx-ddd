@@ -23,6 +23,10 @@
               {
                 "sourceTag": "domain:boarding",
                 "onlyDependOnLibsWithTags": ["domain:boarding", "domain:shared"]
+              },
+              {
+                "sourceTag": "domain:heroes",
+                "onlyDependOnLibsWithTags": ["domain:heroes", "domain:shared"]
               }
             ]
           }

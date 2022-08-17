@@ -25,7 +25,8 @@
       ],
       "@app/booking/feature-search": [
         "libs/booking/feature-search/src/index.ts"
-      ]
+      ],
+      "@app/heroes/domain": ["libs/heroes/domain/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

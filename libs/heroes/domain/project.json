@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/heroes/domain/src",
+  "prefix": "heroes",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/heroes/domain"],
+      "options": {
+        "jestConfig": "libs/heroes/domain/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/heroes/domain/**/*.ts",
+          "libs/heroes/domain/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["domain:heroes", "type:domain-logic"]
+}
