@@ -16,7 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@app/boarding/domain": ["libs/boarding/domain/src/index.ts"],
-      "@app/booking/domain": ["libs/booking/domain/src/index.ts"]
+      "@app/booking/domain": ["libs/booking/domain/src/index.ts"],
+      "@app/booking/feature-search": [
+        "libs/booking/feature-search/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
