@@ -1,5 +1,10 @@
 import { Hero } from '@app/heroes/domain';
-import { getAppName, getHeroesListItem, getTitle } from '../support/app.po';
+import {
+  getAppName,
+  getHeroesListItem,
+  getLinkToHome,
+  getTitle,
+} from '../support/app.po';
 
 describe('heroes', () => {
   beforeEach(() => cy.visit('/'));
@@ -19,6 +24,22 @@ describe('heroes', () => {
       heroes.map((hero: Hero, index: number) => {
         getHeroesListItem().eq(index).contains(hero.name);
       });
+    });
+  });
+
+  context('page 404', () => {
+    beforeEach(() => cy.visit('non-existent-page'));
+
+    it('should display title', () => {
+      getTitle().contains('Error 404');
+    });
+
+    it('should display details', () => {
+      cy.contains('Page not found.');
+    });
+
+    it('shoud have link to home', () => {
+      getLinkToHome().contains('Return to the home page');
     });
   });
 });
