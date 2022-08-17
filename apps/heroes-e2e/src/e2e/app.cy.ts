@@ -1,13 +1,20 @@
-import { getGreeting } from '../support/app.po';
+import { Hero } from '@app/heroes/domain';
+import { getHeroesListItem, getTitle } from '../support/app.po';
 
 describe('heroes', () => {
   beforeEach(() => cy.visit('/'));
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
+  it('should display title', () => {
+    getTitle().contains('heroes-search');
+  });
 
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome heroes');
+  it('should display heroes', () => {
+    cy.fixture('heroes').then((heroes: Hero[]) => {
+      getHeroesListItem().should((i) => expect(i.length).eq(heroes.length));
+
+      heroes.map((hero: Hero, index: number) => {
+        getHeroesListItem().eq(index).contains(hero.name);
+      });
+    });
   });
 });
