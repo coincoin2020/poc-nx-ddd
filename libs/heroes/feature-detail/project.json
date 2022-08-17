@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/heroes/feature-detail/src",
+  "prefix": "heroes",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/heroes/feature-detail"],
+      "options": {
+        "jestConfig": "libs/heroes/feature-detail/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/heroes/feature-detail/**/*.ts",
+          "libs/heroes/feature-detail/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["domain:heroes", "type:feature"]
+}

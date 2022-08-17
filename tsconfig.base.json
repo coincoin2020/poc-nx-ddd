@@ -27,6 +27,7 @@
         "libs/booking/feature-search/src/index.ts"
       ],
       "@app/heroes/domain": ["libs/heroes/domain/src/index.ts"],
+      "@app/heroes/feature-detail": ["libs/heroes/feature-detail/src/index.ts"],
       "@app/heroes/feature-search": ["libs/heroes/feature-search/src/index.ts"]
     }
   },

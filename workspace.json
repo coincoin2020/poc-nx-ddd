@@ -14,6 +14,7 @@
     "heroes": "apps/heroes",
     "heroes-domain": "libs/heroes/domain",
     "heroes-e2e": "apps/heroes-e2e",
+    "heroes-feature-detail": "libs/heroes/feature-detail",
     "heroes-feature-search": "libs/heroes/feature-search"
   }
 }
