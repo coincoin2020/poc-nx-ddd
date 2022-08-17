@@ -27,6 +27,22 @@ describe('heroes', () => {
     });
   });
 
+  it('should have links to heroes details', () => {
+    const INDEX = 1;
+    const ID = 2;
+    cy.fixture('hero-2').then((hero: Hero) => {
+      getHeroesListItem()
+        .eq(INDEX)
+        .contains('See details')
+        .click()
+        .then(() => {
+          cy.url().should('eq', `http://localhost:4200/heroes/${ID}`);
+
+          cy.contains(hero.name);
+        });
+    });
+  });
+
   context('page heroes/2', () => {
     beforeEach(() => cy.visit('heroes/2'));
 
