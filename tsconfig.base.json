@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@app/boarding/domain": ["libs/boarding/domain/src/index.ts"],
       "@app/booking/domain": ["libs/booking/domain/src/index.ts"]
     }
   },
