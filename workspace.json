@@ -13,6 +13,7 @@
     "booking-feature-search": "libs/booking/feature-search",
     "heroes": "apps/heroes",
     "heroes-domain": "libs/heroes/domain",
-    "heroes-e2e": "apps/heroes-e2e"
+    "heroes-e2e": "apps/heroes-e2e",
+    "heroes-feature-search": "libs/heroes/feature-search"
   }
 }
