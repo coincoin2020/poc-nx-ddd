@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { DetailFacade } from '@app/heroes/domain';
 
 @Component({
@@ -7,7 +8,19 @@ import { DetailFacade } from '@app/heroes/domain';
   styleUrls: ['./detail.component.scss'],
 })
 export class DetailComponent implements OnInit {
-  constructor(private detailFacade: DetailFacade) {}
+  @Input() id = 0;
+  heroDetail$ = this.detailFacade.heroDetail$;
 
-  ngOnInit() {}
+  constructor(
+    private detailFacade: DetailFacade,
+    private route: ActivatedRoute
+  ) {}
+
+  ngOnInit() {
+    this.find(this.id);
+  }
+
+  find(id: number): void {
+    this.detailFacade.find(id);
+  }
 }
