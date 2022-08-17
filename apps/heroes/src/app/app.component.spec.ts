@@ -3,7 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
-  const title = "heroes";
+  const title = 'heroes';
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -28,8 +28,8 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('[data-test="app-name"]')?.textContent).toContain(
-      title
-    );
+    expect(
+      compiled.querySelector('[data-test="app-name"]')?.textContent
+    ).toContain(title);
   });
 });
