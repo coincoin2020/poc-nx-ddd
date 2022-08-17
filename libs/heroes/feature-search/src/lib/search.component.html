@@ -4,6 +4,7 @@
   <tr *ngFor="let hero of heroList$ | async">
     <td>{{ hero.id }}</td>
     <td>{{ hero.name }}</td>
+    <td>{{ hero.level }}</td>
     <td>{{ hero.description }}</td>
   </tr>
 </table>

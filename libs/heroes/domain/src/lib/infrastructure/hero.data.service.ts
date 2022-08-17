@@ -17,15 +17,22 @@ export class HeroDataService {
         */
 
     return of([
-      { id: 1, name: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet' },
+      {
+        id: 1,
+        name: 'Raya',
+        level: 4,
+        description: 'Lorem ipsum dolor sit amet',
+      },
       {
         id: 2,
-        name: 'At vero eos',
+        name: 'Kimba',
+        level: 3,
         description: 'At vero eos et accusam et justo duo dolores',
       },
       {
         id: 3,
-        name: 'Duis autem',
+        name: 'Toto',
+        level: 3,
         description: 'Duis autem vel eum iriure dolor in hendrerit',
       },
     ]);
