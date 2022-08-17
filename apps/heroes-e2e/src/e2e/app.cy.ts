@@ -27,6 +27,26 @@ describe('heroes', () => {
     });
   });
 
+  context('page heroes/2', () => {
+    beforeEach(() => cy.visit('heroes/2'));
+
+    it('should display title', () => {
+      cy.fixture('heroes').then((heroes: Hero[]) => {
+        getTitle().contains('heroes-detail');
+      });
+    });
+
+    it('should display hero data', () => {
+      cy.fixture('hero-2').then((hero: Hero) => {
+        cy.contains(hero.name);
+      });
+    });
+
+    it('shoud have link to home', () => {
+      getLinkToHome().contains('Return to the home page');
+    });
+  });
+
   context('page 404', () => {
     beforeEach(() => cy.visit('non-existent-page'));
 
