@@ -1,5 +1,9 @@
 {
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
-  "projects": {}
+  "projects": {
+    "booking": "apps/booking",
+    "booking-domain": "libs/booking/domain",
+    "booking-e2e": "apps/booking-e2e"
+  }
 }
